@@ -9,8 +9,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: Checkout repository
-            uses: actions/checkout@v2
+        - name: Checkout Repository
+            uses: actions/checkout@v3
 
             - name: NodeJS setup
               uses: actions/setup-node@v2
@@ -31,5 +31,5 @@ jobs:
                 aws-region: us-east-1
 
         - name: Sync files to S3
-            run: |
-                aws s3 sync . s3://uktvsideload --delete
+          run: |
+            aws s3 sync . s3://uktvsideload --delete
